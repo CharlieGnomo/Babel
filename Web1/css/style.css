@@ -1,0 +1,45 @@
+@import "../../node_modules/font-awesome/css/font-awesome.min.css";
+
+h1,h2 {
+    color: blue;
+}
+h1{
+    font-weight: bold;
+}
+
+.verde {
+    color:green;
+}
+
+.grande {
+    font-size: 3vW;
+}
+
+p{
+    color:darkmagenta;
+}
+
+.rojo{
+    color:red;
+}
+
+h1.enorme{
+    font-size: 7vw;
+}/*0 0 1 1*/ 
+/*Mayor que .enorme ya que .enorme tendría 0 0 1 0 
+por lo que h1.enorme es más específico*/
+
+/*
+    a - inline
+    b - IDs
+    c - atributos (CLASS) y pseudoclases
+    d - elementos (tags)
+*/
+
+header>p{
+    color: crimson;
+} /*a b c d*/ /*0 0 0 2*/ /*Determinada la especificidad de la regla - dos elementos tag*/
+
+p[lang="es"]{
+    color: magenta;
+}
