@@ -1,0 +1,23 @@
+{
+  "name": "Babel",
+  "version": "1.0.0",
+  "description": "Proyectos realizados en el BabelCamp 2018",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CharlieGnomo/Babel.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CharlieGnomo/Babel/issues"
+  },
+  "homepage": "https://github.com/CharlieGnomo/Babel#readme",
+  "dependencies": {
+    "http-server": "^0.11.1"
+  }
+}
