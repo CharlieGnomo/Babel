@@ -1,5 +1,16 @@
 @import "../../node_modules/font-awesome/css/font-awesome.min.css";
 
+
+:root{
+    --color-principal: blue;
+}
+
+*,
+*::before, *::after,
+*:after, *:before{
+    box-sizing: border-box;
+}
+
 h1,h2 {
     color: blue;
 }
@@ -41,5 +52,47 @@ header>p{
 } /*a b c d*/ /*0 0 0 2*/ /*Determinada la especificidad de la regla - dos elementos tag*/
 
 p[lang="es"]{
-    color: magenta;
+    cursor: pointer;
 }
+
+p[lang="es"]:hover span{
+    color: rgb(0, 255, 55);
+}
+
+p[lang="en"]::first-letter{
+    font-style: italic;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 4rem;
+}
+
+ul::before{
+    content: "Aqui empieza una lista";
+    color: green;
+}
+
+ul::after{
+    content: "Aqui termina una lista";
+    color:red;
+}
+
+p:nth-child(2){
+    color: goldenrod;
+}
+
+body>p:nth-of-type(1){
+    color:blue;
+}
+
+p~p{
+    font-weight: bold;
+}
+
+li:nth-child(even){
+    color: blueviolet;
+}
+
+li:nth-child(odd){
+    color: yellowgreen;
+}
+

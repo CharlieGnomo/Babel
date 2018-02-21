@@ -1,0 +1,11 @@
+@import "../../node_modules/font-awesome/css/font-awesome.min.css";
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+@import "style.css";
+
+*,
+*::before, *::after,
+*:after, *:before{
+    box-sizing: border-box;
+}
+
+@media
