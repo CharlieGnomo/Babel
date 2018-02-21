@@ -15,6 +15,11 @@
         header h1{
             font-size: 3rem;
             font-family: 'Pacifico', cursive;
+            text-align: center;
+        }
+
+        header p cite{
+            float:right;
         }
 
 article{
@@ -47,7 +52,8 @@ article{
         box-shadow: 0px 5px 5px black;
         font-size: 2rem;
         width: 100%;
-        background-color: goldenrod;
+        background-color: #ffbc00;
+        color: black;
         padding: 0rem 2rem;
     }
 
