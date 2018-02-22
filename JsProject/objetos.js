@@ -1,31 +1,52 @@
 const user = {
     nombre : "Pepe",
     apellido : "Perez",
-    edad : 23
+    edad : 23,
+    genero: "H",
+    saludar : function(){
+        console.log(`HOLA, SOY ${this.nombre}
+        `);
+    }
 };
 
-//user.genero = "H";
-
-//ponemos const para evitar que sobreescribamos el valor de mostrarA quitando así la función.
-const mostrarA = data1 => {
-    data1.genero = "H";
-    console.log(data1);
+//Función constructora
+function User (nombre, apellidos, edad, genero){
+    this.nombre = nombre;
+    this.apellidos = apellidos;
+    this.edad = edad;
+    this.genero = genero;
+    ++User.prototype.numUsers;
 }
 
-//let clon = Object.assign(user);
+//guardamos los métodos dentro del prototipo del objeto para evitar crear la función una y otra vez
+User.prototype.saludar = function(){
+    console.log(`Hola, soy ${this.nombre} y ya somos ${this.numUsers}
+    `);
+}
 
-mostrarA(user);
+User.prototype.numUsers = 0;
+
+var mostrar = data => console.log(this);
+
+//mostrar();
+//console.log(this);
+
+user.saludar();
+
+oUser1 = new User("JUAN","LOPEZ",33,"H");
+oUser1.saludar();
+
+oUser2 = new User("RAQUEL","LOPEZ",31,"M");
+oUser2.saludar();
+
+
+
 /**
- * Para crear una copia exacta de un objeto pero sin tocar el original
+ * En JS hay 4 métodos de invocación
+ * 
+ * mostrar()
+ * console.log()
+ * new User()
+ * call/apply
+ * 
  */
-mostrarA(Object.assign({},user));
-mostrarA(JSON.parse(JSON.stringify(user)));
-//mostrarA(clon);
-
-/* JSON.stringify(user); // devuelve el string JSON de un objeto
-
-JSON.parse(string_tipo_JSON); */ //devuelve el objeto a partir de un string JSON
-
-
-
-console.log(user);
