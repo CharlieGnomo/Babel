@@ -1,7 +1,8 @@
 .wraper{
-    margin: 2rem;
+    margin: 0 auto;
     max-width: 1000px;
     padding: 2%;
+    box-shadow: 0 0 1em black;
 }
 
     header{
@@ -18,13 +19,14 @@
             text-align: center;
         }
 
+        header p{
+            padding-right: 1rem;
+        }
+
         header p cite{
             float:right;
         }
 
-article{
-    border: 1px solid black;
-}
 
     article p{
         color: white;
@@ -123,7 +125,6 @@ div::after{
 div.inline{
     width: 90%;
     margin: 2rem auto;
-    border: 1px solid black;
 }
 
 .inline p{
