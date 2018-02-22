@@ -38,3 +38,8 @@ alumno1 = new Alumno("Julio", "Salinas",20,"H","Tercero");
 alumno1.notas = [9,2,3,7,8];
 alumno1.saludar();
 console.log(alumno1);
+
+alumno2 = new Alumno("Fer", "Salinas",12,"H","Quinto");
+alumno2.notas = [4,2,2,2,1];
+alumno2.saludar();
+console.log(alumno2);
