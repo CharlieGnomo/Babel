@@ -1,0 +1,14 @@
+*,
+*::before, *::after,
+*:after, *:before{
+    box-sizing: border-box;
+}
+
+.container{
+    width: 60%;
+    margin: 2rem auto;
+}
+
+div{
+    width: 60%;
+}
