@@ -37,9 +37,4 @@ class Main {
 
 }
 
-(function () {
-    let oMain = new Main();
-})();
-
-
-
+(function () {new Main();})();
