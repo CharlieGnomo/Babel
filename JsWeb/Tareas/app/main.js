@@ -29,7 +29,8 @@ class Main {
     }
 
 
-    registrar() {
+    registrar(oEv) {
+        console.log(oEv);
         this.user.nombre = this.view.iNombre.value;
         localStorage.setItem('nombre', this.user.nombre);
         this.mostrarNombre();
