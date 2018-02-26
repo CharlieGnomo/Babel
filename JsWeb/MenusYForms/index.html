@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Menús y Formularios</title>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- <script src="./app/app.js" type="module"></script> -->
+
+    <script src="./app/script.js"></script>
+    <!--<script src="./app/main.js"></script> NOS LO PODEMOS AHORRAR CON TYPE MODULE ARRIBA-->
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Menús y Formularios</h1>
+            <h2>Menú</h2>
+            <nav class="inlineBlock">
+                <ul>
+                    <li>
+                        <a id="op1" href="#">Opcion1</a>
+                    </li>
+                    <li>
+                        <a id="op2" href="#">Opcion2</a>
+                    </li>
+                    <li>
+                        <a id="op3" href="#">Opcion3</a>
+                    </li>
+                    <li>
+                        <a id="op4" href="#">Opcion4</a>
+                    </li>
+                    <li>
+                        <a id="op5" href="#">Opcion5</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+
+        <article id="artMenu">
+            <h2>Formulario</h2>
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Formulario</legend>
+                    <label for="texto">Texto</label>
+                    <input type="text" name="texto" id="texto" required>
+                    <label>Radio Button 1
+                        <input type="radio" name="rb" id="rb1">
+                    </label>
+                    <label>Radio Button 2
+                        <input type="radio" name="rb" id="rb2">
+                    </label>
+                    <input type="submit" value="Enviar">
+                </fieldset>
+            </form>
+        </article>
+
+        <footer>
+            <address>
+                Carlos L. Martínez - BabelCamp_3.0
+            </address>
+        </footer>
+    </div>
+</body>
+
+</html>

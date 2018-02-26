@@ -1,0 +1,77 @@
+*,
+*::before, *::after,
+*:after, *:before{
+    box-sizing: border-box;
+}
+
+.container{
+    width: 60%;
+    margin: 2rem auto;
+}
+
+div{
+    width: 60%;
+}
+
+.rojo{
+    color: maroon;
+    font-weight: bold;
+}
+
+nav ul{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    overflow: hidden;
+}
+
+nav.inlineBlock li{
+    display: inline-block;
+    width: 15%;
+    background-color: blueviolet;
+}
+
+nav.float li{
+    float: left;
+    width: 15%;background-color: aqua;
+
+}
+
+nav.flexBox ul{
+    display: flex;
+    justify-content: center;
+}
+nav.flexBox li{
+    width: 15%;
+    background-color: rgb(76, 0, 255);
+}
+
+nav.grid ul{
+    display: grid;
+    grid-column-gap: 2px;
+    grid-template-columns: 12.5% 1fr 1fr 1fr 1fr 1fr 12.5%;
+}
+
+nav.grid ul::afer,nav.grid ul::before{
+    content: "";
+    display: block;
+}
+
+nav.grid li{
+    width: 15%;
+    background-color: brown;
+}
+
+
+nav a{
+    text-decoration: none;
+    display: block;
+    padding: 1rem 2rem;
+    white-space: nowrap;
+    color: initial;
+}
+
+input:invalid{
+    border: 1px solid red;
+}
