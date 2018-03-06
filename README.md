@@ -9,3 +9,10 @@ Proyectos realizados en el BabelCamp 2018
 * npm
 * Servidor web local
 * npm, Grunt, Gulp, Webpack
+
+## ANGULAR JS
+<b> Entorno </b>
+* Angular JS vs Angular
+* Angular cli
+* Components
+* Estructura del proyecto
