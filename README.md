@@ -16,3 +16,4 @@ Proyectos realizados en el BabelCamp 2018
 * Angular cli
 * Components
 * Estructura del proyecto
+* Typescript
