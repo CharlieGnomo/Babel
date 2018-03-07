@@ -1,0 +1,15 @@
+<div class="card">
+    <div class="card-header">
+      <h4 class="card-title">Padre</h4>
+    </div>
+    <div class="card-body">
+      <div class="form-group">
+        <label for="nombre">Mi hijo se llama</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Nombre" [(ngModel)]="sNombre">
+      </div>
+    </div>
+    <bbl-hijo [hNombre]="sNombre" (respuesta)="respuestaHijo($event)"></bbl-hijo>
+    <div class="card-footer text-muted">
+      <p>Mi hijo se llama {{sNombre}}</p>
+    </div>
+  </div>
