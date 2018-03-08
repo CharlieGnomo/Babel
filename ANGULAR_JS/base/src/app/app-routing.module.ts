@@ -8,6 +8,8 @@ const routes: Routes = [
 { path: 'about', component: AboutComponent },
 { path: 'catalogo', loadChildren: './catalogo/catalogo.module#CatalogoModule' },
 { path: 'comunics', loadChildren: './comunics/comunics.module#ComunicsModule' },
+{ path: 'agenda', loadChildren: './agenda/agenda.module#AgendaModule' },
+{ path: 'impresora', loadChildren: './impresora/impresora.module#ImpresoraModule' },
 { path: '', pathMatch: 'full', redirectTo: 'home' }
 ];
 
