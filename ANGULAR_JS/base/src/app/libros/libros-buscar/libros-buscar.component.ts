@@ -22,14 +22,32 @@ export class LibrosBuscarComponent implements OnInit {
     const url = this.urlBase + this.clave;
     this.http.get(url).toPromise().then(
       (response: any) => {
-        console.log(response);
-        response.items.forEach(element => {
-          this.aLibros.push(element.volumeInfo.title);
-        });
+        if (response.items) {
+          response.items.forEach(element => {
+            this.aLibros.push(element.volumeInfo.title);
+          });
+        }
       }
 
     )
       .catch((error) => console.log(error));
+      this.clave = '';
+  }
+
+  buscarRx() {
+    this.aLibros = [];
+    const url = this.urlBase + this.clave;
+    this.http.get(url).subscribe(
+      (response: any) => {
+        if (response.items) {
+          response.items.forEach(element => {
+            this.aLibros.push(element.volumeInfo.title);
+          });
+        }
+      }
+
+    );
+      this.clave = '';
   }
 
 }
