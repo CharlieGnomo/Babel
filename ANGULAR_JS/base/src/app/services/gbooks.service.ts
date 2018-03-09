@@ -20,10 +20,10 @@ export class GbooksService {
             response.items.forEach(element => {
               this.aLibros.push(element.volumeInfo.title);
             });
+            return new Promise((resolve, reject) => resolve(this.aLibros));
           }
         }
       );
-    return new Promise((resolve, reject) => resolve(this.aLibros));
   }
 
   getLibrosBasic(clave: string) {
