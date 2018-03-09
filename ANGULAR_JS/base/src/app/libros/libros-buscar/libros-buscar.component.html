@@ -1,0 +1,20 @@
+
+<div class="card">
+  <div class="card-header">
+      <h4 class="card-title">Buscar Libros</h4>
+  </div>
+  <div class="card-body">
+      <div class="form-group">
+        <label for="clave">Introduce una clave</label>
+        <input type="text" class="form-control" name="clave" id="clave" placeholder="Clave" [(ngModel)] = "clave">
+      </div>
+      <button type="button" class="btn btn-primary" (click)="buscar()">Buscar</button>
+      <!-- <button type="button" class="btn btn-primary" (click)="buscarAsinc()">Buscar Asincrónicamente</button> -->
+  </div>
+  <div class="card-footer text-muted">
+    Resultados
+    <ul class="list-group">
+      <li class="list-group-item"*ngFor="let libro of aLibros">{{libro}}</li>
+    </ul>
+  </div>
+</div>

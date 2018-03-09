@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { HomeModule } from './home/home.module';
 import { AboutModule } from './about/about.module';
+import { LibrosBuscarComponent } from './libros/libros-buscar/libros-buscar.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -18,7 +20,8 @@ import { AboutModule } from './about/about.module';
     AppRoutingModule,
     CoreModule,
     HomeModule,
-    AboutModule
+    AboutModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
