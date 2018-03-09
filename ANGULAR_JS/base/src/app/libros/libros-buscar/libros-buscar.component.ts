@@ -45,7 +45,6 @@ export class LibrosBuscarComponent implements OnInit {
           });
         }
       }
-
     );
       this.clave = '';
   }

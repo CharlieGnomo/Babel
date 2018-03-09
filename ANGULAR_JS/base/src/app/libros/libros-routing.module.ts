@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LibrosBuscarComponent } from './libros-buscar/libros-buscar.component';
+import { LibrosGeneralComponent } from './libros-general/libros-general.component';
 
 const routes: Routes = [
-  { path: '', component: LibrosBuscarComponent },
+  { path: '', component: LibrosGeneralComponent },
 ];
 
 @NgModule({
