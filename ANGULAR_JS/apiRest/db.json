@@ -1,0 +1,9 @@
+{
+  "posts": [
+    { "id": 1, "title": "json-server", "author": "typicode" }
+  ],
+  "users": [
+      {"id": "1", "name": "Pepe", "apellido": "Pérez", "telefono": "9989989998", "email": "cjieje@babel.es"},
+      {"id": "2", "name": "Laura", "apellido": "Pérez", "telefono": "9985559998", "email": "fdfdfe@babel.es"}
+  ]
+}
