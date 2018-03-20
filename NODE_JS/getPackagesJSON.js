@@ -4,14 +4,17 @@ const fs_readDir = util.promisify(fs.readdir);
 const getPackageJSON = require('./getPackage');
 const path = require('path');
 const folder = '../node_modules';
+const _ = require('lodash');
 
 function getPackagesJSON() {
     return getListFolders()
-    .then(getPackagesFromList)
-    .then(getPackageJSON)
-    .then((data) => {
-        console.log(data);
-    });
+        .then(getPackagesFromList)
+        /* .then((data) => {
+            console.log(data);
+        }) */
+        .then(filterPackagesNull)
+        .then(console.log)
+        .catch(console.error);
     /* return fs_readDir(folder,'utf8')
     .then((data) => {
         console.log(data);
@@ -21,33 +24,41 @@ function getPackagesJSON() {
     /* .then(console.log); */
 }
 
-function getPackagesFromList(list) {
-    console.log(list);
-    const result = [];
-    list.forEach(element => {
-        getPackageJSON(element,i)
-        .then((packInfo) => {
-            result.push(packInfo);
-            count = i;
-        })
-    });
-    if(count === list.length){
-        return result;
-    }
+function filterPackagesNull(array) {
+    return _.filter(array, (element) => element !== null)
 }
 
 function getListFolders() {
     return fs_readDir(folder);
 }
 
-function parserData(data){
-    /* return {
+function getPackagesFromList(list) {
+    const promises = [];
+    list.forEach(element => {
+        promises.push(resolveVersion(element));
+        /* 
+        .then((packInfo) => {
+            result.push(packInfo);
+        }) */
+    });
+    return Promise.all(promises);
+}
+
+function resolveVersion(folder) {
+    return getPackageJSON(folder)
+    .then((package) => {
+        return _.get(package, 'version');
+    })
+}
+
+/*function parserData(data) {
+     return {
         name: data.name,
         description: data.description,
         version: data.version,
         license: data.license
-    }; */
-}
+    }; 
+}*/
 
 /* function leerFichero(fichero) {
     return new Promise((resolve, reject) => {

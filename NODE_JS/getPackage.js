@@ -2,6 +2,7 @@ const fs = require('fs');
 const util = require('util');
 const fs_readFile = util.promisify(fs.readFile);
 const path = require('path');
+const _ = require('lodash');
 
 
 function getPackageJSON(nameFolder) {
@@ -12,15 +13,16 @@ function getPackageJSON(nameFolder) {
         return JSON.parse(data);
     })
     .then(parserData)
-    .then(console.log);
+    .catch(() => null);
+    /* .then(console.log); */
 }
 
 function parserData(data){
     return {
-        name: data.name,
-        description: data.description,
-        version: data.version,
-        license: data.license
+        name: _.get(data, 'name'),
+        description: _.get(data, 'description'),
+        version: _.get(data, 'version'),
+        license: _.get(data, 'license'),
     };
 }
 
