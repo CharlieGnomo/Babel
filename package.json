@@ -19,6 +19,8 @@
   "homepage": "https://github.com/CharlieGnomo/Babel#readme",
   "dependencies": {
     "font-awesome": "^4.7.0",
-    "http-server": "^0.11.1"
+    "http-server": "^0.11.1",
+    "lodash": "^4.17.5",
+    "moment": "^2.21.0"
   }
 }
