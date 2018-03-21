@@ -1,36 +1,36 @@
 const fs = require('fs');
 const util = require('util');
-const fs_readFile = util.promisify(fs.readFile);
-const path = require('path');
+
+const fsReadfile = util.promisify(fs.readFile);
+/* const path = require('path'); */
 const _ = require('lodash');
 
+function parserData(data) {
+  return {
+    name: _.get(data, 'name'),
+    description: _.get(data, 'description'),
+    version: _.get(data, 'version'),
+    license: _.get(data, 'license'),
+  };
+}
 
 function getPackageJSON(nameFolder) {
-    const file = `../node_modules/${nameFolder}/package.json`;
-    return fs_readFile(file,'utf8')
-    .then((data) => {
-        /* console.log(data); */
-        return JSON.parse(data);
-    })
+  const file = `../node_modules/${nameFolder}/package.json`;
+  return fsReadfile(file, 'utf8')
+    .then(data =>
+    /* console.log(data); */
+      JSON.parse(data))
     .then(parserData)
     .catch(() => null);
-    /* .then(console.log); */
+  /* .then(console.log); */
 }
 
-function parserData(data){
-    return {
-        name: _.get(data, 'name'),
-        description: _.get(data, 'description'),
-        version: _.get(data, 'version'),
-        license: _.get(data, 'license'),
-    };
-}
 
 module.exports = getPackageJSON;
 
 /* function leerFichero(fichero) {
     return new Promise((resolve, reject) => {
-        fs.fs_readFile(fichero, 'utf8', (err, resultado) => {
+        fs.fsReadfile(fichero, 'utf8', (err, resultado) => {
             if (err) {
                 return reject(err);
             }

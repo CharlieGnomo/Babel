@@ -4,8 +4,12 @@
   "description": "Proyectos realizados en el BabelCamp 2018",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint --ext .js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "pre-commit": [
+    "lint"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/CharlieGnomo/Babel.git"
@@ -18,11 +22,18 @@
   },
   "homepage": "https://github.com/CharlieGnomo/Babel#readme",
   "dependencies": {
+    "body-parser": "^1.18.2",
     "express": "^4.16.3",
     "font-awesome": "^4.7.0",
     "http-server": "^0.11.1",
+    "http-status": "^1.0.1",
     "lodash": "^4.17.5",
     "moment": "^2.21.0",
-    "nodemon": "^1.17.2"
+    "nodemon": "^1.17.2",
+    "pre-commit": "^1.2.2"
+  },
+  "devDependencies": {
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.9.0"
   }
 }
