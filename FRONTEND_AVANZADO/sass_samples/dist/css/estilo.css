@@ -1,3 +1,4 @@
+@charset "UTF-8";
 header h1 {
   color: red; }
 
@@ -15,3 +16,40 @@ nav {
 
 .test-img {
   color: green; }
+
+/*
+        PRIMERA FORMA
+  Aqui no se añaden los estilos 
+  de estiloA si no se extienden
+*/
+.estiloB {
+  color: green;
+  font-size: 2rem; }
+
+.estiloB {
+  border: 1px solid black; }
+
+/*
+       SEGUNDA FORMA
+*/
+.estiloC, .estiloD {
+  color: green;
+  font-size: 2rem; }
+
+.estiloD {
+  border: 1px solid black; }
+
+/**
+    Mixins
+*/
+body {
+  color: maroon;
+  margin: 2rem; }
+
+p {
+  color: red;
+  margin: 3rem; }
+
+table {
+  color: white;
+  margin: 1rem; }

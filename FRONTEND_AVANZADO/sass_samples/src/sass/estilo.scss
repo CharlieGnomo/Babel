@@ -24,9 +24,63 @@ nav {
     }
 }
 
-$div_name : test-img;
-
+$div_name: test-img;
 //Interpolación de varibles #{}
-.#{$div_name}{
+.#{$div_name} {
     color: green;
+}
+
+/*
+        PRIMERA FORMA
+  Aqui no se añaden los estilos 
+  de estiloA si no se extienden
+*/
+%estiloA {
+    color: green;
+    font-size: 2rem;
+}
+
+.estiloB {
+    @extend %estiloA;
+    border: 1px solid black;
+}
+
+/*
+       SEGUNDA FORMA
+*/
+.estiloC {
+    color: green;
+    font-size: 2rem;
+}
+
+.estiloD {
+    @extend .estiloC;
+    border: 1px solid black;
+}
+
+/**
+    Mixins
+*/
+
+@mixin base() {
+    color: maroon;
+    margin: 2rem;
+}
+
+@mixin baseArg($margen: 1rem, $color: red) {
+    color: $color;
+    margin: $margen;
+}
+
+body{
+    @include base();
+}
+
+p{
+    @include baseArg(3rem);
+}
+
+//Pone a table el color : white y además por defecto l margin: 1rem
+table{
+    @include baseArg($color: white);
 }
