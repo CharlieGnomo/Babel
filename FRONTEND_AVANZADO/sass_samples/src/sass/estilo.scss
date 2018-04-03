@@ -1,0 +1,32 @@
+//Variables CSS
+$color_fondo: red;
+$fondo_suave: lighten($color_fondo, 20%); //con funcion
+/////////////////////
+header {
+    h1 {
+        color: $color_fondo;
+    }
+}
+
+main {
+    @import '_extras.scss';
+}
+
+nav {
+    //& para indicar que el selector es 'nav'
+    width: 100%;
+    &:nth-of-type(1) {
+        li {
+            display: inline-block;
+            color: blue;
+            background-color: $fondo_suave;
+        }
+    }
+}
+
+$div_name : test-img;
+
+//Interpolación de varibles #{}
+.#{$div_name}{
+    color: green;
+}

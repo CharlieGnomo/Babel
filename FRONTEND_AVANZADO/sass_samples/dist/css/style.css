@@ -1,0 +1,7 @@
+header h1 {
+  color: darkcyan; }
+
+main .extra {
+  color: magenta; }
+  main .extra li {
+    font-weight: bold; }

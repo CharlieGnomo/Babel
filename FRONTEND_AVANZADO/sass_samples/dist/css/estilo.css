@@ -1,0 +1,17 @@
+header h1 {
+  color: red; }
+
+main .extra {
+  color: magenta; }
+  main .extra li {
+    font-weight: bold; }
+
+nav {
+  width: 100%; }
+  nav:nth-of-type(1) li {
+    display: inline-block;
+    color: blue;
+    background-color: #ff6666; }
+
+.test-img {
+  color: green; }
