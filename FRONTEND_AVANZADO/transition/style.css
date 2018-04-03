@@ -1,0 +1,40 @@
+h1{
+    font-size: 2rem;
+    color: black;
+    background: -webkit-gradient(linear, left top, right bottom, from(red), to(yellow));
+    background: linear-gradient(to bottom right, red, yellow);
+    border-radius: 6rem;
+    border: 1px solid black;
+    min-height:  3rem;
+    padding: 1rem;
+    /* transition-property: font-size;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+    transition-delay: 1s; */
+    -webkit-transition: all 3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: all 3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+h1:hover{
+    font-size: 4rem;
+    color: white;
+    background: -webkit-gradient(linear, left top, right top, from(green), to(yellow));
+    background: linear-gradient(to right, green, yellow);
+    border-radius: 20rem;
+    min-height:  4rem;
+    padding: 2rem;
+    text-align: center;
+}
+
+main div{
+    margin: 2rem;
+    padding:1rem;
+    border: 1px solid black;
+    width: 50%;
+    transition: all linear 1s;
+}
+
+main div:nth-of-type(1):hover~div{
+    background-color: darkmagenta;
+    transform: rotate(180deg) scale(2,2) translate3d(2,2,2);
+}
