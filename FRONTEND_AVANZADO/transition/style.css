@@ -36,5 +36,5 @@ main div{
 
 main div:nth-of-type(1):hover~div{
     background-color: darkmagenta;
-    transform: rotate(180deg) scale(2,2) translate3d(2,2,2);
+    transform: rotate(180deg) scale(2,2);
 }

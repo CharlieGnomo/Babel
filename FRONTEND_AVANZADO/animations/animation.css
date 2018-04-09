@@ -1,0 +1,26 @@
+@keyframes colores{
+    0% {background-color: crimson;}
+    25% {background-color: rgb(168, 52, 10);}
+    50% {background-color: orangered;}
+    75% {background-color: rgb(240, 137, 100);}
+    100% {background-color: mediumvioletred;}
+}
+
+@keyframes movimiento{
+    0%{left:0rem; top: 0rem;}
+    25%{left: 15rem; top: 0rem;}
+    50%{left: 15rem; top: 15rem;}
+    75%{left: 0rem; top: 15rem;}
+    100%{left: 0rem; top: 0rem;}
+}
+
+div.animado{
+    width: 20%;
+    min-height: 20%;
+    border: 1px solid black;
+    animation: colores 1s infinite, movimiento 1s infinite;
+    position: absolute;
+    margin-top: 10rem;
+    /* animation-name: colores movimiento;
+    animation-duration: 5s; */
+}
